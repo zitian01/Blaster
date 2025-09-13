@@ -31,12 +31,12 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void MoveForward(float Value);
 
 private:
-	UPROPERTY(VisibleAnywhere, Category = FollowCamera)
+	UPROPERTY(VisibleAnywhere, Category = FollowCamera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
-	UPROPERTY(VisibleAnywhere, Category = FollowCamera)
+	UPROPERTY(VisibleAnywhere, Category = FollowCamera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
+
 public:
 };
