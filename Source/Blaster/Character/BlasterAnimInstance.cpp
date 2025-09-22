@@ -25,6 +25,7 @@ void UBlasterAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	FVector Velocity = BlasterCharacter->GetVelocity();
 	Velocity.Z = 0;
 	Speed = Velocity.Size();
+
 	bIsInAir = BlasterCharacter->GetCharacterMovement()->IsFalling();
 	bIsAccelerating = BlasterCharacter->GetCharacterMovement()->GetCurrentAcceleration().Size() > 0.f ? true : false;
 	
